@@ -1,0 +1,13 @@
+#!/bin/sh 
+tmux -2 new-session -d -s "Develop" 
+
+tmux split-window -h
+tmux select-pane -t 0
+#tmux send-keys "clear" C-m
+tmux select-pane -t 1
+#tmux send-keys "clear" C-m
+tmux split-window -v
+#tmux send-keys "clear" C-m
+tmux select-pane -t 0
+
+tmux -2 attach-session
